@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
 }
 
 body {
@@ -10,6 +11,12 @@ body {
   margin: 20px;
   padding: 20px;
   border: 1px solid black;
+}
+
+label {
+  display: inline-block;
+  width: 120vw;
+  text-align: right;
 }
 
 .convert {
@@ -25,6 +32,12 @@ body {
   align-items: flex-start;
   padding: 20px;
   width: 60vw;
+  height: 10vh;
+}
+.convert__text label {
+  display: inline-block;
+  width: 15vw;
+  text-align: right;
 }
 .convert__morse {
   flex-direction: row;
@@ -32,8 +45,19 @@ body {
   padding: 20px;
   width: 60vw;
 }
+.convert__morse label {
+  display: inline-block;
+  width: 15vw;
+  text-align: right;
+}
 .convert__button {
-  height: 5vh;
+  width: 50vw;
   border-radius: 2px;
   padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.convert__button button {
+  padding: 5px 10px;
+  font-size: 15px;
 }/*# sourceMappingURL=styles.css.map */
