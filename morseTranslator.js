@@ -54,3 +54,27 @@ export const translateToMorseCode = (textToConvert) => {
     return convertedText.trim();
 
     };
+
+    export const translateToEnglish = (ArrayToConvert) => {
+        // if text has a character not in the translation table
+        const valueArr = Object.values (morseTranslation);
+        console.log(valueArr);
+    
+        let convertedTextArr = [];
+        let convertedChar = "";
+        for (let i=0; i < ArrayToConvert.length; i++) {
+            const charToConvert = ArrayToConvert[i];
+            console.log(charToConvert)
+            if (valueArr.includes (charToConvert)) {
+                convertedChar = Object.keys(morseTranslation).find(key => morseTranslation[key] === charToConvert);
+                convertedTextArr.push(convertedChar);
+                console.log(convertedChar);
+
+            } else {
+                throw new Error("Unrecognized character in input");
+            }
+            
+        }
+        return convertedTextArr.join("");
+    
+        };
