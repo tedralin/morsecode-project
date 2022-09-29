@@ -18,9 +18,8 @@ morseButton.addEventListener("click", (event) => {
 
 textButton.addEventListener("click", (event) => {
     event.preventDefault();
-    const inputMorseArr = morseText.value.split(" ");
--    console.log (inputMorseArr);
-    const convertedEnglishText = translateToEnglish(inputMorseArr);
+    // const inputMorseArr = morseText.value.split(" ");
+    const convertedEnglishText = translateToEnglish(morseText.value);
     console.log (convertedEnglishText);
     if (convertedEnglishText) {
         englishText.value = convertedEnglishText;   
